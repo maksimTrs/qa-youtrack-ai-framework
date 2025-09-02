@@ -4,7 +4,7 @@
 
 **BEFORE starting Figma analysis, you MUST read and follow:**
 
-- **Master QA Methodology:** `MCP_YouTrack_AI_Promt.md` (complete file)
+- **Master QA Methodology:** `MCP_YouTrack_AI_Prompt.md` (complete file)
 - **Figma Integration Section:** Section 2 - "Figma MCP Integration (OPTIONAL ENHANCEMENT MODULE)"
 - **Analysis Requirements:** All 4 MCP tools × ALL frames = N×4 total tool calls
 

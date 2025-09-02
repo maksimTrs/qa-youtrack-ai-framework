@@ -82,9 +82,9 @@ The project uses these MCP servers for enhanced functionality:
 ├── .mcp_example.json         # MCP config template
 ├── CLAUDE.md                 # Project context and instructions for Claude Code
 ├── CLAUDE_CODE_WORKFLOW.md   # Detailed Claude Code usage guide
-├── MCP_YouTrack_AI_Promt.md  # Master promt for the task
-├── MCP_YouTrack_AI_Promt_Smoke.md # Master smoke promt for the task
-└── TASK-PROMTS/              # Task-specific prompt templates
+├── MCP_YouTrack_AI_Prompt.md  # Master prompt for the task
+├── MCP_YouTrack_AI_Prompt_Smoke.md # Master smoke prompt for the task
+└── prompts/                  # Task-specific prompt templates
     ├── YouTrack_XXX-123_Init.md        # Init prompt to generate test artifacts using YouTrack MCP
     ├── Figma_XXX-123_Support.md        # Figma MCP frameworks/mockups (optional)
     └── Playwright_XXX-123_UI_Tests.md  # Playwright MCP UI flow via Chrome browser (optional)
@@ -97,15 +97,15 @@ The project uses these MCP servers for enhanced functionality:
 **Step 1: Initialize Task Analysis**
 
 1. Start Claude Code session: `claude`
-2. Use `TASK-PROMTS/YouTrack_XXX-123_Init.md` prompt to initiate master prompt execution from `MCP_YouTrack_AI_Promt.md`
-   - **Note:** For smoke testing, reference `MCP_YouTrack_AI_Promt_Smoke.md` instead inside `YouTrack_XXX-123_Init.md`
+2. Use `prompts/YouTrack_XXX-123_Init.md` prompt to initiate master prompt execution from `MCP_YouTrack_AI_Prompt.md`
+   - **Note:** For smoke testing, reference `MCP_YouTrack_AI_Prompt_Smoke.md` instead inside `YouTrack_XXX-123_Init.md`
 3. The prompt will execute YouTrack MCP task logic + code reading from patch files
 4. **Output:** Creates QA test artifacts in `QA/{TASK-ID}/{TASK-ID}-test-scenarios.md`
 
 **Step 2: Enhanced Analysis (Optional)**
 
-- **Figma Integration:** Add `TASK-PROMTS/Figma_XXX-123_Support.md` prompt to read Figma frames via Figma MCP and update test scenarios with significant UI cases
-- **Browser Testing:** Add `TASK-PROMTS/Playwright_XXX-123_UI_Tests.md` prompt to show Claude Code full context of working UI realization via browser and update test scenarios with significant findings
+- **Figma Integration:** Add `prompts/Figma_XXX-123_Support.md` prompt to read Figma frames via Figma MCP and update test scenarios with significant UI cases
+- **Browser Testing:** Add `prompts/Playwright_XXX-123_UI_Tests.md` prompt to show Claude Code full context of working UI realization via browser and update test scenarios with significant findings
 
 ### ⚡ Claude Code Commands
 

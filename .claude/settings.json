@@ -1,0 +1,67 @@
+ {
+  "env": {
+    "MAX_MCP_OUTPUT_TOKENS": "100000",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "100000"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp:*)",
+      "mcp__YouTrack__get_issue_raw",
+      "mcp__YouTrack__advanced_search",
+      "Bash(grep:*)",
+      "WebFetch(domain:github.com)",
+      "mcp__Figma_Dev_Mode_MCP__get_image",
+      "mcp__Figma_Dev_Mode_MCP__get_code", 
+      "mcp__Figma_Dev_Mode_MCP__get_variable_defs",
+      "mcp__Figma_Dev_Mode_MCP__get_code_connect_map",
+      "mcp__YouTrack__get_issue_comments",
+      "mcp__YouTrack__get_help",
+      "mcp__YouTrack__get_issue_links",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_type",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_close",
+      "mcp__YouTrack__get_issue",
+      "mcp__context7__resolve-library-id",
+      "WebSearch",
+      "Bash(claude --version)",
+      "Bash(cat:*)",
+      "mcp__YouTrack__search_issues",
+      "Bash(sed:*)",
+      "mcp__context7__get-library-docs",
+      "Bash(claude config get)"
+    ],
+    "deny": [
+      "Read(*.properties)",
+      "Read(*.conf)",
+      "Read(*.pem)",
+      "Read(*.cert)",
+      "Read(*.crt)",
+      "Read(*.sh)",
+      "Read(*.key)",
+      "Read(*.p12)",
+      "Read(*.pfx)",
+      "Read(*.jks)",
+      "Read(*.env)",
+      "Read(.env*)",
+      "Read(*.secret)",
+      "Read(*.secrets)",
+      "Read(*.password)",
+      "Read(*.pwd)",
+      "Read(*.config)",
+      "Read(*.cfg)",
+      "Read(*.tmp)",
+      "Read(*.temp)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "fetch",
+    "playwright",
+    "context7",
+    "YouTrack",
+    "Figma Dev Mode MCP"
+  ]
+}

@@ -70,30 +70,4 @@ A comprehensive understanding of **XXX-123** functionality based on real UI beha
 
 ---
 
-### Scenario - AI banner verification for organization customer type:
-
-5. **On the new** ${{url}} page click "Buy commercial license" **OR** if you can't find it, use buttons: "Buy New License" -> "For my company"
-6. **Choose** "IntelliJ IDEA Ultimate" and "ReSharper" products and click "Go to checkout"
-7. **Observe** "JetBrains AI" banner section (text, design, buttons, links, etc.)
-8. **Click** on "Add to cart" banner button
-9. **Observe** new product row in the cart: "JetBrains AI Pro", banner is hidden now
-10. **Click** on "×" button for the "JetBrains AI Pro" product - you can see "JetBrains AI" banner again
-
-**NOTE:** This scenario validates that **multiple IDEs trigger AI banner** (priority logic discovery)
-
----
-
-### Scenario - AI banner exclusion with existing AI products:
-
-5. **On the new** ${{url}} page click "Buy commercial license" **OR** if you can't find it, use buttons: "Buy New License" -> "For my company"
-6. **Choose** "IntelliJ IDEA Ultimate" and "ReSharper" products
-7. **Click** on "Team Tools & Services" tab and choose "JetBrains AI Pro"
-8. **Click** "Go to checkout"
-9. **Observe** "JetBrains AI" banner - banner is not here at all (exclusion logic validation)
-10. **Click** on "×" button for the "JetBrains AI Pro" product - you can see "JetBrains AI" banner appear
-
-**NOTE:** This scenario validates the **AI product exclusion rule** - no AI banner when AI product already in cart
-
----
-
 > **📝 NOTE:** The same logic of the Browser Scenarios above also work for the personal customer type.
